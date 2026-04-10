@@ -351,13 +351,48 @@ namespace G_NET_9_Adv03
             //Exercise 6: Browser History(Undo)
             //Simulate browser back / forward
             //Create a Stack<string> for browser history
-            //Push 5 URLs: "google.com", "github.com", "stackoverflow.com", "youtube.com", "claude.ai"
-            //Use Peek to see the current page(top of stack)
-            //Press "back" 3 times using Pop — print each page you leave
-            //Print the current page after going back
-            //Try TryPop on an empty stack — what happens?
+            //1.Push 5 URLs: "google.com", "github.com", "stackoverflow.com", "youtube.com", "claude.ai"
+            //2.Use Peek to see the current page(top of stack)
+            //3.Press "back" 3 times using Pop — print each page you leave
+            //4.Print the current page after going back
+            //5.Try TryPop on an empty stack — what happens?
             //===============================================================
 
+
+            //Stack<string> history = new Stack<string>();
+
+            //// 1.Push 5 URLs: "google.com", "github.com", "stackoverflow.com", "youtube.com", "claude.ai"
+            //history.Push("google.com");
+            //history.Push("github.com");
+            //history.Push("stackoverflow.com");
+            //history.Push("youtube.com");
+            //history.Push("claude.ai");
+
+
+            ////2.Use Peek to see the current page(top of stack)
+            //Console.WriteLine($"Current page: {history.Peek()}");
+
+
+            ////3.Press "back" 3 times using Pop — print each page you leave
+            //for(int i = 0; i <3; i++)
+            //{
+            //    Console.WriteLine(history.Pop());
+            //}
+
+
+
+            ////4.Print the current page after going back
+            //Console.WriteLine($"Current page after going back 3 times : {history.Peek()}");
+
+
+
+            ////5.Try TryPop on an empty stack — what happens?
+            //history.Clear();
+            //history.TryPop(out string item);
+            //Console.WriteLine(item);
+
+            // same as with tryDequeue, it doesn't throw an exception when facing an error it just puts null in the output variable
+            // so when printing item it won't print anything
             #endregion
 
         }
