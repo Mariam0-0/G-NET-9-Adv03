@@ -298,19 +298,53 @@ namespace G_NET_9_Adv03
 
             //bool isSubset = setC.IsSubsetOf(setA);
             //Console.WriteLine(isSubset);
-            
+
             #endregion
 
             #region Exercise 5
             //Exercise 5: Print Queue Simulator
             //Simulate a printer queue
             //Create a Queue<string> and enqueue 5 documents: "Report.pdf", "Invoice.pdf", "Letter.docx", "Resume.pdf", "Photo.jpg"
-            //Print the queue contents and Count
-            //Use Peek to see which document will print next(without removing)
-            //Process the queue: Dequeue each document and print "Printing: [name]"
-            //Try TryDequeue on the now - empty queue — what happens?
+            //1.Print the queue contents and Count
+            //2.Use Peek to see which document will print next(without removing)
+            //3.Process the queue: Dequeue each document and print "Printing: [name]"
+            //4.Try TryDequeue on the now - empty queue — what happens?
             //===============================================================
 
+            //Queue<string> queue = new Queue<string>();
+            //queue.Enqueue("Report.pdf");
+            //queue.Enqueue("Invoice.pdf");
+            //queue.Enqueue("Letter.docx");
+            //queue.Enqueue("Resume.pdf");
+            //queue.Enqueue("Photo.jpg");
+
+            ////1.Print the queue contents and Count
+            //Console.WriteLine("Queue Contents:");
+            //foreach (var item in queue)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine($"Count: {queue.Count}");
+
+
+            ////2.Use Peek to see which document will print next(without removing)
+
+            //Console.WriteLine($"Next element to be removed: {queue.Peek()}");
+
+
+
+            ////3.Process the queue: Dequeue each document and print "Printing: [name]"
+            //while (queue.Count > 0)
+            //{
+            //    Console.WriteLine($"Printing: {queue.Dequeue()}");
+            //}
+
+
+            ////4.Try TryDequeue on the now - empty queue — what happens?
+            //queue.TryDequeue(out string item);
+            //Console.WriteLine($"Dequeue empty queue: {item}");
+            // item = null since tryDequeue is a safe version of dequeue that doesn't throw an exception when the queue is empty
             #endregion
 
             #region Exercise 6
