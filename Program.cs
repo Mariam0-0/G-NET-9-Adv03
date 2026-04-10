@@ -120,13 +120,13 @@ namespace G_NET_9_Adv03
             //===============================================================
 
             //1.
-            SortedList<int, string> leaderboard = new()
-            {
-                [500] = "Ahmed",
-                [200] = "Sara",
-                [800] = "Ali",
-                [350] = "Mona"
-            };
+            //SortedList<int, string> leaderboard = new()
+            //{
+            //    [500] = "Ahmed",
+            //    [200] = "Sara",
+            //    [800] = "Ali",
+            //    [350] = "Mona"
+            //};
 
             //2.Print all entries(they should be sorted by score automatically)
 
