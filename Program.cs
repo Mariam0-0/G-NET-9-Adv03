@@ -245,14 +245,60 @@ namespace G_NET_9_Adv03
             #region Exercise 4
             //Exercise 4: Unique Email Validator
             //Use Collection to manage unique email addresses.
-            //Create a HashSet<string> with a case -insensitive comparer: new HashSet<string>(StringComparer.OrdinalIgnoreCase)
-            //Add these emails: "ahmed@test.com", "AHMED@test.com", "sara@test.com", "Sara@Test.Com"
-            //Print Count — how many are actually stored? Explain why.
-            //Create two sets: Set A = { 1, 2, 3, 4, 5 } and Set B = { 4,5,6,7,8}
-            //Print the result of: UnionWith, IntersectWith, ExceptWith
-            //Use IsSubsetOf to check if { 1,2} is a subset of Set A
+            //1.Create a HashSet<string> with a case -insensitive comparer: new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+            //2.Add these emails: "ahmed@test.com", "AHMED@test.com", "sara@test.com", "Sara@Test.Com"
+            //3.Print Count — how many are actually stored? Explain why.
+            //4.Create two sets: Set A = { 1, 2, 3, 4, 5 } and Set B = { 4,5,6,7,8}
+            //5.Print the result of: UnionWith, IntersectWith, ExceptWith
+            //6.Use IsSubsetOf to check if { 1,2} is a subset of Set A
             //===============================================================
 
+            ////1.Create a HashSet<string> with a case -insensitive comparer: new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+            //HashSet<string> emailSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+
+            ////2.Add these emails: "ahmed@test.com", "AHMED@test.com", "sara@test.com", "Sara@Test.Com"
+            //emailSet.Add("ahmed@test.com");
+            //emailSet.Add("AHMED@test.com");
+            //emailSet.Add("sara@test.com");
+            //emailSet.Add("Sara@Test.Com");
+
+
+            ////3.Print Count — how many are actually stored? Explain why.
+
+            //Console.WriteLine($"Set Count: {emailSet.Count}");
+            // count = 2 because HashSet only contains unique values and when trying to add duplicates
+            // it ignores it and doesn't add the value, and since we made the set case insensitive so it will
+            // see "ahmed@test.com" the same as "AHMED@test.com", so it will add only the first one, same
+            // with "sara@test.com" and "Sara@Test.Com", it will add the first email only
+
+
+            ////4.Create two sets: Set A = { 1, 2, 3, 4, 5 } and Set B = { 4,5,6,7,8}
+            //HashSet<int> setA = [1, 2, 3, 4, 5 ];
+            //HashSet<int> setB = [4, 5, 6, 7, 8];
+
+
+            ////5.Print the result of: UnionWith, IntersectWith, ExceptWith
+            //var union = new HashSet<int>(setA);
+            //union.UnionWith(setB);
+            //Console.WriteLine($"Union: {string.Join(", ", union)}");
+
+            //var intersection = new HashSet<int>(setA);
+            //intersection.IntersectWith(setB);
+            //Console.WriteLine($"Intersection: {string.Join(", ", intersection)}");
+
+            //var difference = new HashSet<int>(setA);
+            //difference.ExceptWith(setB);
+            //Console.WriteLine($"Except: {string.Join(", ", difference)}");
+
+
+
+            ////6.Use IsSubsetOf to check if { 1,2} is a subset of Set A
+            //HashSet<int> setC = [1, 2];
+
+            //bool isSubset = setC.IsSubsetOf(setA);
+            //Console.WriteLine(isSubset);
+            
             #endregion
 
             #region Exercise 5
