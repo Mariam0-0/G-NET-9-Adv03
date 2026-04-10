@@ -140,7 +140,7 @@ namespace G_NET_9_Adv03
 
             //Console.WriteLine($"First Key: {leaderboard.Keys[0]}");
             //Console.WriteLine($"First Value: {leaderboard.Values[0]}");
-            
+
 
 
             //4.Check if score 500 exists
@@ -176,15 +176,70 @@ namespace G_NET_9_Adv03
             #region Exercise 3
             //Exercise 3: Phone Book
             //Build a phone book application.
-            //Create a Collection with 4 contacts(name → phone number)
-            //Add a new contact using [] syntax (add or update)
-            //Try adding a duplicate using .Add() — catch the exception and print the error
-            //Try adding a duplicate using .TryAdd() — print whether it succeeded
-            //Search for a contact that doesn’t exist
-            //Get a contact with a fallback of "Not Found"
-            //Print all Keys on one line, then all Values on another line
+            //1.Create a Collection with 4 contacts(name → phone number)
+            //2.Add a new contact using [] syntax (add or update)
+            //3.Try adding a duplicate using .Add() — catch the exception and print the error
+            //4.Try adding a duplicate using .TryAdd() — print whether it succeeded
+            //5.Search for a contact that doesn’t exist
+            //6.Get a contact with a fallback of "Not Found"
+            //7.Print all Keys on one line, then all Values on another line
             //===============================================================
 
+            ////1.Create a Collection with 4 contacts(name → phone number)
+            //Dictionary<string, int> phoneBook = new()
+            //{
+            //    ["Ahmed"] = 0123,
+            //    ["Sara"] = 0456,
+            //    ["Ali"] = 0789,
+            //    ["Marwa"] = 0321
+            //};
+
+            ////2.Add a new contact using [] syntax (add or update)
+            //phoneBook["Mona"] = 0654; // ADD
+            //phoneBook["Ali"] = 0194; // UPDATE
+
+
+            ////3.Try adding a duplicate using .Add() — catch the exception and print the error
+            //try
+            //{
+            //    phoneBook.Add("Ahmed", 0284);
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine($"ERROR cannot add duplicates: {e}");
+            //}
+
+
+            ////4.Try adding a duplicate using .TryAdd() — print whether it succeeded
+            //bool check = phoneBook.TryAdd("Ahmed", 0546);
+            //if ( check )
+            //{
+            //    Console.WriteLine("Added succesfully");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Duplicates not allowed");
+            //}
+
+
+            ////5.Search for a contact that doesn’t exist
+            //bool found = phoneBook.ContainsKey("Doaa");
+            //if ( found )
+            //    Console.WriteLine("Doaa was found");
+            //else
+            //    Console.WriteLine("Doaa was not found");
+
+
+            ////6.Get a contact with a fallback of "Not Found"
+            //int found2 = phoneBook.GetValueOrDefault("Doaa", -1);
+            //Console.WriteLine(found2 == -1 ? "Not Found" : found2.ToString());
+
+
+            ////7.Print all Keys on one line, then all Values on another line
+
+            //Console.WriteLine(string.Join(", ", phoneBook.Keys));
+
+            //Console.WriteLine( string.Join(", ", phoneBook.Values));
             #endregion
 
             #region Exercise 4
