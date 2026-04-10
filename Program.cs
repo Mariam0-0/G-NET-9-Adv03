@@ -111,13 +111,65 @@ namespace G_NET_9_Adv03
             #region Exercise 2
             //Exercise 2: Leaderboard
             //Create a leaderboard that automatically sorts players by score.
-            //Add: 500 = "Ahmed", 200 = "Sara", 800 = "Ali", 350 = "Mona"
-            //Print all entries(they should be sorted by score automatically)
-            //Access the first key and first value
-            //Check if score 500 exists
-            //Safely get the player with score 999
-            //Remove the player with score 200 and print the updated list
+            //1.Add: 500 = "Ahmed", 200 = "Sara", 800 = "Ali", 350 = "Mona"
+            //2.Print all entries(they should be sorted by score automatically)
+            //3.Access the first key and first value
+            //4.Check if score 500 exists
+            //5.Safely get the player with score 999
+            //6.Remove the player with score 200 and print the updated list
             //===============================================================
+
+            //1.
+            SortedList<int, string> leaderboard = new()
+            {
+                [500] = "Ahmed",
+                [200] = "Sara",
+                [800] = "Ali",
+                [350] = "Mona"
+            };
+
+            //2.Print all entries(they should be sorted by score automatically)
+
+            //Console.WriteLine("Leaderboard Entries:");
+            //for(int i =0; i < leaderboard.Count; i++) 
+            //{
+            //    Console.WriteLine($"{leaderboard.Keys[i]}");
+            //}
+
+            //3.Access the first key and first value
+
+            //Console.WriteLine($"First Key: {leaderboard.Keys[0]}");
+            //Console.WriteLine($"First Value: {leaderboard.Values[0]}");
+            
+
+
+            //4.Check if score 500 exists
+
+            //bool found = leaderboard.ContainsKey(500);
+            //if (found)
+            //    Console.WriteLine("Key 100 was found");
+            //else
+            //    Console.WriteLine("Key 100 was not found :(");
+
+
+            //5.Safely get the player with score 999
+            //bool found = leaderboard.TryGetValue(999, out string result);
+            //if (found)
+            //    Console.WriteLine($"Player with key 999 was found: {result}");
+            //else
+            //    Console.WriteLine("Player with key 999 was not found :(");
+
+
+            //6.Remove the player with score 200 and print the updated list
+            //leaderboard.Remove(200);
+            //Console.WriteLine("Leaderboard entries after removing key 200:");
+            //for (int i = 0; i < leaderboard.Count; i++)
+            //{
+            //    Console.WriteLine($"{leaderboard.Keys[i]} - {leaderboard.Values[i]}");
+            //}
+
+
+
 
             #endregion
 
