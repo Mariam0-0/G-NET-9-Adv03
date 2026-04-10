@@ -9,6 +9,7 @@ using System.Runtime.Intrinsics.X86;
 using System.Xml.Linq;
 using System.Xml;
 using System;
+using System.Drawing;
 
 namespace G_NET_9_Adv03
 {
@@ -19,16 +20,92 @@ namespace G_NET_9_Adv03
             #region Exercise 1
             //Exercise 1: Student Grade Manager
             //Create a program that manages student grades using One Of Collections
-            //Create a Collection with these grades: 85, 92, 78, 95, 88, 70, 100, 65
-            //Print the collection, Count, first and last grade
-            //Sort the grades ascending, then print
-            //Get the first grade above 90
-            //Get all grades below 75(failing grades)
-            //Remove all failing grades(below 75)
-            //Check if any grade equals 100
-            //Create a List<string> where each grade becomes "Grade: X"
+            //1. Create a Collection with these grades: 85, 92, 78, 95, 88, 70, 100, 65
+            //2. Print the collection, Count, first and last grade
+            //3. Sort the grades ascending, then print
+            //4. Get the first grade above 90
+            //5. Get all grades below 75(failing grades)
+            //6. Remove all failing grades(below 75)
+            //7. Check if any grade equals 100
+            //8. Create a List<string> where each grade becomes "Grade: X"
             //===============================================================
 
+            //// 1.
+            //List<int> grades = new List<int>() { 85, 92, 78, 95, 88, 70, 100, 65 };
+
+            ////2. 
+            //Console.Write("Grades: ");
+            //PrintList(grades);
+            //Console.WriteLine($"Grades Count: {grades.Count}");
+            //Console.WriteLine($"First Grade: {grades[0]}");
+            //Console.WriteLine($"Last Grade: {grades[grades.Count - 1]}");
+
+
+            ////3.
+            //Console.WriteLine("========================================");
+            //Console.WriteLine();
+            //grades.Sort();
+            //Console.WriteLine("Grades After Sorting: ");
+            //PrintList(grades);
+
+
+            ////4. Get the first grade above 90
+            //Console.WriteLine("========================================");
+            //Console.WriteLine();
+            //foreach(int grade in grades)
+            //{
+            //    if(grade > 90)
+            //    {
+            //        Console.WriteLine($"First grade after 90 found: {grade}");
+            //        break;
+            //    }
+            //}
+
+
+            ////5. Get all grades below 75(failing grades)
+            //Console.WriteLine("========================================");
+            //Console.WriteLine();
+            //List<int> failing = new List<int>();
+            //foreach (int grade in grades)
+            //{
+            //    if (grade < 70)
+            //    {
+            //        failing.Add(grade);
+            //    }
+
+            //}
+            //Console.Write("Failing grades: ");
+            //PrintList(failing);
+
+
+            ////6. Remove all failing grades(below 75)
+            //Console.WriteLine("========================================");
+            //Console.WriteLine();
+
+            //grades.RemoveAll(g => g < 75);
+            //Console.WriteLine("Grades >= 75: ");
+            //PrintList(grades);
+
+            ////7. Check if any grade equals 100
+
+            //bool found = grades.Contains(100);
+            //if(found)
+            //    Console.WriteLine("Grade = 100 was found");
+            //else
+            //    Console.WriteLine("Grade = 100 not found :(");
+
+
+            ////8. Create a List<string> where each grade becomes "Grade: X"
+            //List<string> gradesString = new List<string>();
+            //foreach (int grade in grades)
+            //{
+            //    gradesString.Add($"Grade: {grade}");
+            //}
+            //Console.WriteLine("String grades: ");
+            //foreach (string grade in gradesString)
+            //{
+            //    Console.WriteLine(grade);
+            //}
             #endregion
 
             #region Exercise 2
@@ -95,6 +172,19 @@ namespace G_NET_9_Adv03
             //===============================================================
 
             #endregion
+
+        }
+        static void PrintList (List<int> list)
+        {
+            Console.Write("[");
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (i == list.Count - 1)
+                    Console.Write($"{list[i]}]");
+                else
+                    Console.Write($"{list[i]}, ");
+            }
+            Console.WriteLine();
 
         }
     }
